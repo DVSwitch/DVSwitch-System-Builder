@@ -1,0 +1,32 @@
+[Unit]
+Description=NXDN Gateway Service
+# Description=Place this file in /lib/systemd/system
+# Description=N4IRS 04/20/2018
+
+# The device name should point to the
+# port the mmdvm is plugged into.
+# For USB ports (Arduino Due)
+# BindTo=dev-ttyACM0.device
+#
+# To make the network-online.target available
+# systemctl enable systemd-networkd-wait-online.service
+
+After=network-online.target syslog.target netcheck.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=3
+StandardOutput=null
+WorkingDirectory=/opt/NXDNGateway
+ExecStart=/opt/NXDNGateway/NXDNGateway /opt/NXDNGateway/NXDNGateway.ini
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+

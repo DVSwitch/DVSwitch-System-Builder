@@ -1,0 +1,60 @@
+<?php
+# This is an auto-generated config-file!
+# Be careful, when manual editing this!
+
+date_default_timezone_set('UTC');
+define("MMDVMLOGPATH", "/var/log/mmdvm");
+define("MMDVMINIPATH", "/opt/MMDVM_Bridge");
+define("MMDVMINIFILENAME", "MMDVM_Bridge.ini");
+define("MMDVMHOSTPATH", "/opt/MMDVM_Bridge");
+define("ENABLEXTDLOOKUP", "on");
+define("TALKERALIAS", "on");
+define("DMRIDDATPATH", "/var/lib/mmdvm/DMRIds.dat");
+define("RESOLVETGS", "on");
+define("ENABLEYSFGATEWAY", "on");
+define("YSFGATEWAYLOGPATH", "/var/log/mmdvm");
+define("YSFGATEWAYLOGPREFIX", "YSFGateway");
+define("YSFGATEWAYINIPATH", "/opt/YSFGateway");
+define("YSFGATEWAYINIFILENAME", "YSFGateway.ini");
+define("YSFHOSTSPATH", "/var/lib/mmdvm");
+define("YSFHOSTSFILENAME", "YSFHosts.txt");
+define("DMRGATEWAYLOGPATH", "");
+define("DMRGATEWAYLOGPREFIX", "");
+define("DMRGATEWAYINIPATH", "");
+define("DMRGATEWAYPATH", "");
+define("DMRGATEWAYINIFILENAME", "");
+define("LINKLOGPATH", "");
+define("IRCDDBGATEWAY", "");
+define("TIMEZONE", "America/New_York");
+define("LOCALE", "en_US");
+define("LOGO", "");
+define("DMRPLUSLOGO", "");
+define("BRANDMEISTERLOGO", "");
+define("REFRESHAFTER", "60");
+define("SHOWCPU", "on");
+define("SHOWDISK", "on");
+define("SHOWRPTINFO", "on");
+define("SHOWMODES", "on");
+define("SHOWLH", "on");
+define("SHOWLOCALTX", "on");
+define("SHOWPROGRESSBARS", "on");
+define("TEMPERATUREHIGHLEVEL", "60");
+define("SWITCHNETWORKUSER", "");
+define("SWITCHNETWORKPW", "");
+define("VIEWLOGUSER", "");
+define("VIEWLOGPW", "");
+define("HALTUSER", "");
+define("HALTPW", "");
+define("REBOOTUSER", "");
+define("REBOOTPW", "");
+define("RESTARTUSER", "");
+define("RESTARTPW", "");
+define("REBOOTYSFGATEWAY", "");
+define("REBOOTMMDVM", "");
+define("REBOOTSYS", "");
+define("HALTSYS", "");
+define("POWERONLINEPIN", "");
+define("POWERONLINESTATE", "");
+define("SHOWQRZ", "on");
+define("RSSI", "avg");
+?>

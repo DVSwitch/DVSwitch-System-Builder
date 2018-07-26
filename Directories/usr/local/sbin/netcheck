@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+# URL
+# Tries (reachable)
+# Sleep
+# /etc/default/netcheck
+
+# Initialize number of attempts
+reachable=2
+while [ $reachable -ne 0 ]; do
+  # Check host
+  # ping -q -c 1 -W 1 "www.google.com" > /dev/null 2>&1
+  echo starting... >/var/log/netcheck
+  wget http://google.com/robots.txt --tries 10 --output-document=/tmp/robots.txt &> /dev/null
+  # echo finish wget >>/var/log/netcheck
+  # Check return code
+  if [ $? -eq 0 ]; then
+    # Success, we can exit with the right return code
+    echo pass >>/var/log/netcheck
+    exit 0
+    return
+  fi
+  # Network down, decrement counter and try again
+  let reachable-=1
+  # Sleep for one second
+  sleep 19
+done
+# Network down, number of attempts exhausted, quiting
+  echo fail >>/var/log/netcheck
+exit 1
+
+# echo $?

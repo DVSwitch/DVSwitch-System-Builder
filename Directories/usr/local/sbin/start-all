@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# set -o errexit
+
+# N4IRS 07/26/2017
+
+#################################################
+#                                               #
+#                                               #
+#                                               #
+#################################################
+
+systemctl start nxdngateway.service
+systemctl start nxdnparrot.service
+systemctl start p25gateway.service
+systemctl start p25parrot.service
+systemctl start ysfgateway.service
+systemctl start ysfparrot.service
+systemctl start mmdvm_bridge.service
+systemctl start analog_bridge
+systemctl start quantar_bridge
+systemctl start md380-emu
+

@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+set -o errexit
+
+# N4IRS 06/15/2018
+
+#################################################
+#                                               #
+#                                               #
+#                                               #
+#################################################
+
+# Update the source code for the programs we want.
+# You COULD run this nightly or on-demand.
+
+cd /srv/Repositories/CA6JAU
+cd /srv/Repositories/CA6JAU/MMDVM_CM
+git pull
+cd /srv/Repositories/CA6JAU/MMDVM_HS
+git pull
+
+cd /srv/Repositories/DG9VH
+cd /srv/Repositories/DG9VH/MMDVMHost-Dashboard
+git pull
+
+cd /srv/Repositories/G4KLX
+cd /srv/Repositories/G4KLX/DMRGateway
+git pull
+cd /srv/Repositories/G4KLX/P25Clients
+git pull
+cd /srv/Repositories/G4KLX/YSFClients
+git pull
+cd /srv/Repositories/G4KLX/NXDNClients
+git pull
+cd /srv/Repositories/G4KLX/MMDVMHost
+git pull
+cd /srv/Repositories/G4KLX/MMDVMCal
+git pull
+cd /srv/Repositories/G4KLX/MMDVM.git
+git pull
+cd /srv/Repositories/N0MJS
+cd /srv/Repositories/N0MJS/dmr_utils
+git pull
+cd /srv/Repositories/N0MJS/HBlink
+git pull
+cd /srv/Repositories/N0MJS/DMRlink
+git pull
+cd /srv/Repositories/N0MJS/HB_Bridge
+git pull
+cd /srv/Repositories/N0MJS/IPSC_Bridge
+git pull
