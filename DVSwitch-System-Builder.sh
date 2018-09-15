@@ -31,7 +31,7 @@ apt-get install quantar -y
 # apt-get install libstdc++-arm-none-eabi-newlib -y
 
 # Need to save the working directory. This will work for now
-cd /srv/MMDVM-Install/DVSwitch-System-Builder
+cd /srv/DVSwitch-System-Builder
 
 cp -rf ./Directories/* /
 
