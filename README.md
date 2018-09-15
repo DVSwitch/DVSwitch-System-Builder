@@ -13,4 +13,4 @@ mv DVSwitch-System-Builder-master DVSwitch-System-Builder
 
 cd DVSwitch-System-Builder
 
-DVSwitch-System-Builder.sh 
+./DVSwitch-System-Builder.sh 
