@@ -92,7 +92,7 @@ then
 fi
 
 # Generate new file
-curl 'http://registry.dstar.su/dmr/DMRIds.php' 2>/dev/null | sed -e 's/[[:space:]]\+/ /g' > ${DMRIDFILE}
+curl 'https://www.radioid.net/static/users.csv' 2>/dev/null | sed -e 's/[[:space:]]\+/ /g' > ${DMRIDFILE}
 
 # Restart MMDVMHost
 eval ${RESTARTCOMMAND}
