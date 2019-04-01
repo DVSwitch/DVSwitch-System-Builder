@@ -24,6 +24,7 @@ apt-get install git-core -y
 apt-get install curl -y
 apt-get install g++ -y
 apt-get install make -y
+apt-get install jq -y
 apt-get install dvswitch -y
 apt-get install quantar -y
 
