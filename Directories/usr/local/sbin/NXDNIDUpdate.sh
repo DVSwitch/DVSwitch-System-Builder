@@ -6,5 +6,4 @@
 #                                                 #
 ###################################################
 
-wget -O /var/lib/mmdvm/NXDN.csv -q "https://www.radioid.net/static/nxdn.csv"
-
+curl -s -N https://www.radioid.net/api/nxdn/user/?id=% | jq -r '.results[] | [.id, .callsign, .fname] | @csv' | sed -e 's/"//g' > /var/lib/mmdvm/nxdn.csv

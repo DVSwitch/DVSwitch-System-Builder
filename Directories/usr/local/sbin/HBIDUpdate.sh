@@ -6,8 +6,6 @@
 #                                                 #
 ###################################################
 
-wget -O /var/lib/dvswitch/subscriber_ids.csv -q --no-check-certificate "https://www.radioid.net/static/users.csv"
+curl -s -N https://www.radioid.net/api/cplus/user/?id=% | jq -r '.results[] | [.id, .callsign, .fname] | @csv' | sed -e 's/"//g' > /var/lib/dvswitch/subscriber_ids.csv
 
-wget -O /var/lib/dvswitch/peer_ids.csv -q --no-check-certificate "https://www.radioid.net/static/rptrs.csv"
-
-
+curl -s -N https://www.radioid.net/static/rptrids_simple_cbridge.csv | sed 's/- //g' | sed 's/,.*//g' | sed -r 's/([a-zA-Z0-9]+) ([a-zA-Z0-9]+)/\2 \1/g' > /var/lib/dvswitch/peer_ids.csv
