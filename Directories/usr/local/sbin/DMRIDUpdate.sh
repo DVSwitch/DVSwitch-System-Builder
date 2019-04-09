@@ -90,7 +90,7 @@ then
 fi
 
 # Generate new file
-curl 'https://www.radioid.net/static/users.csv' 2>/dev/null | sed -e 's/\t//g' | awk -F"," '/,/{gsub(/ /, "", $2); printf "%s\t%s\t%s\n", $1, $2, $3}' | sed -e 's/\(.\) .*/\1/g' > ${DMRIDFILE}
+curl -s -N "https://www.radioid.net/api/dmr/user/?id=%" | jq -r '.results[] | [.id, .callsign, .fname] | @csv' | sed -e 's/"//g' | sed -e 's/,/ /g' > ${DMRIDFILE}
 
 # Restart YSF2DMR & mmdmvhost
 #eval ${RESTARTCOMMAND2}
