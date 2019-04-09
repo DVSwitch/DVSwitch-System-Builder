@@ -51,7 +51,7 @@
 #                              CONFIGURATION
 #
 # Full path to DMR ID file
-DMRIDFILE=/var/lib/mmdvm/DMRIds.dat
+DMRIDFILE=/var/lib/dvswitch/DMRIds.dat
 #
 # How many DMR ID files do you want backed up (0 = do not keep backups)
 DMRFILEBACKUP=1
