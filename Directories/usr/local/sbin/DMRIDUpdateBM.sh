@@ -74,6 +74,9 @@ then
 fi
 
 # Create backup of old file
+if [ -f ${DMRIDFILE} ]
+then
+
 if [ ${DMRFILEBACKUP} -ne 0 ]
 then
 	cp ${DMRIDFILE} ${DMRIDFILE}.$(date +%d%m%y)
@@ -89,6 +92,7 @@ then
 	do
 		rm $f
 	done
+fi
 fi
 
 # Generate new file
