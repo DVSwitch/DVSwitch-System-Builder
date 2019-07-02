@@ -77,22 +77,22 @@ fi
 if [ -f ${DMRIDFILE} ]
 then
 
-if [ ${DMRFILEBACKUP} -ne 0 ]
-then
-	cp ${DMRIDFILE} ${DMRIDFILE}.$(date +%d%m%y)
-fi
+	if [ ${DMRFILEBACKUP} -ne 0 ]
+	then
+		cp ${DMRIDFILE} ${DMRIDFILE}.$(date +%d%m%y)
+	fi
 
 # Prune backups
-BACKUPCOUNT=$(ls ${DMRIDFILE}.* | wc -l)
-BACKUPSTODELETE=$(expr ${BACKUPCOUNT} - ${DMRFILEBACKUP})
+	BACKUPCOUNT=$(ls ${DMRIDFILE}.* | wc -l)
+	BACKUPSTODELETE=$(expr ${BACKUPCOUNT} - ${DMRFILEBACKUP})
 
-if [ ${BACKUPCOUNT} -gt ${DMRFILEBACKUP} ]
-then
-	for f in $(ls -tr ${DMRIDFILE}.* | head -${BACKUPSTODELETE})
-	do
-		rm $f
-	done
-fi
+	if [ ${BACKUPCOUNT} -gt ${DMRFILEBACKUP} ]
+	then
+		for f in $(ls -tr ${DMRIDFILE}.* | head -${BACKUPSTODELETE})
+		do
+			rm $f
+		done
+	fi
 fi
 
 # Generate new file
