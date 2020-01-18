@@ -6,27 +6,34 @@
 # /etc/default/netcheck
 
 # Initialize number of attempts
-reachable=2
+reachable=4
+echo "NetCheck starting: [`date +%T.%3N`]" >> /var/log/netcheck
 while [ $reachable -ne 0 ]; do
   # Check host
   # ping -q -c 1 -W 1 "www.google.com" > /dev/null 2>&1
-  echo starting... >/var/log/netcheck
-  wget http://google.com/robots.txt --tries 10 --output-document=/tmp/robots.txt &> /dev/null
-  # echo finish wget >>/var/log/netcheck
+# echo "NetCheck starting: [`date +%T.%3N`]" > /var/log/netcheck
+  echo >>/var/log/netcheck
+  wget https://google.com/robots.txt --spider --tries 10 --output-document=/tmp/robots.txt &>>/var/log/netcheck
   # Check return code
   if [ $? -eq 0 ]; then
     # Success, we can exit with the right return code
-    echo pass >>/var/log/netcheck
+    echo "NetCheck success: [`date +%T.%3N`]" >> /var/log/netcheck
+    echo >>/var/log/netcheck
+    systemd-notify READY=1
     exit 0
     return
   fi
   # Network down, decrement counter and try again
   let reachable-=1
-  # Sleep for one second
-  sleep 19
+  # echo $reachable
+  # Sleep for five seconds
+  sleep 5
 done
+
 # Network down, number of attempts exhausted, quiting
-  echo fail >>/var/log/netcheck
+  echo >>/var/log/netcheck
+  echo "NetCheck FAIL: [`date +%T.%3N`]" >> /var/log/netcheck
+systemd-notify ERRNO=99
 exit 1
 
 # echo $?
