@@ -9,6 +9,7 @@
 #                     Version 2.45                      #
 #                                                       #
 #   Based on the update script by Tony Corbett G0WFV    #
+#   Tweaks by N4IRS. Don't blame Tony or Andy           #
 #                                                       #
 #########################################################
 
