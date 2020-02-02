@@ -25,6 +25,12 @@ apt-get install curl -y
 apt-get install g++ -y
 apt-get install make -y
 apt-get install jq -y
+apt-get install build-essential -y
+apt-get install libwxgtk3.0-dev -y
+apt-get install portaudio19-dev -y
+apt-get install libusb-1.0-0-dev -y
+apt-get install chkconfig -y
+apt-get install python-serial -y
 apt-get install dvswitch -y
 apt-get install quantar -y
 
@@ -50,6 +56,7 @@ git clone https://github.com/g4klx/DMRGateway.git
 git clone https://github.com/g4klx/P25Clients.git
 git clone https://github.com/g4klx/YSFClients.git
 git clone https://github.com/g4klx/NXDNClients.git
+git clone https://github.com/g4klx/ircDDBGateway.git
 
 cd /srv/Repositories/N0MJS
 git clone https://github.com/n0mjs710/dmr_utils.git
@@ -57,9 +64,6 @@ git clone https://github.com/n0mjs710/HBlink.git
 git clone https://github.com/n0mjs710/DMRlink.git
 git clone -b HB_Bridge https://github.com/n0mjs710/HBlink.git HB_Bridge
 git clone -b IPSC_Bridge https://github.com/n0mjs710/DMRlink.git IPSC_Bridge
-
-# cd /srv/Repositories/OpenDV
-# Nothing here
 
 # Copy the source directories to /usr/src
 # This allows me to keep a pristine copy in /srv/Repositories
@@ -70,6 +74,8 @@ cp -R MMDVMHost-Dashboard/* /var/www/html/
 cd /srv/Repositories/G4KLX
 cp -rf DMRGateway /usr/src
 
+cp -rf ircDDBGateway /usr/src/
+
 cd /srv/Repositories/G4KLX/NXDNClients
 cp -rf NXDNGateway NXDNParrot /usr/src
 
@@ -78,6 +84,8 @@ cp -rf P25Gateway P25Parrot /usr/src
 
 cd /srv/Repositories/G4KLX/YSFClients
 cp -rf YSFGateway YSFParrot /usr/src
+
+
 
 # cd /srv/Repositories/N0MJS
 # Flesh this out
@@ -90,6 +98,11 @@ make clean
 make
 cp DMRGateway /opt/DMRGateway
 cp -rf Audio /opt/DMRGateway
+
+cd /usr/src/ircDDBGateway
+make clean
+make
+make install
 
 cd /usr/src/NXDNGateway
 make clean
