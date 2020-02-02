@@ -12,6 +12,7 @@ Description=P25 Parrot Service
 # systemctl enable systemd-networkd-wait-online.service
 
 After=network-online.target syslog.target netcheck.service
+Requires=netcheck.service
 Wants=network-online.target
 
 [Service]
