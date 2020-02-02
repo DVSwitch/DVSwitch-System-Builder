@@ -20,7 +20,7 @@ chmod +x install-dvswitch-repo
 # This could be pruned
 #
 apt-get update -y
-apt-get install git-core -y
+apt-get install git -y
 apt-get install curl -y
 apt-get install g++ -y
 apt-get install make -y
@@ -136,17 +136,17 @@ systemctl enable netcheck.service
 
 # Populate the datafiles
 #
-/etc/cron.daily/DMRIDUpdateBM
-/etc/cron.daily/FCSRoomsupdate
-/etc/cron.daily/HBIDUpdate
-/etc/cron.daily/NXDNHostsupdate
-/etc/cron.daily/NXDNIDUpdate
-/etc/cron.daily/P25Hostsupdate
-/etc/cron.daily/TGList-DMR_update
-/etc/cron.daily/TGList-NXDN_update
-/etc/cron.daily/TGList-P25_update
-/etc/cron.daily/XLXHostsupdate
-/etc/cron.daily/YSFHostsupdate
+# /etc/cron.daily/DMRIDUpdateBM
+# /etc/cron.daily/FCSRoomsupdate
+# /etc/cron.daily/HBIDUpdate
+# /etc/cron.daily/NXDNHostsupdate
+# /etc/cron.daily/NXDNIDUpdate
+# /etc/cron.daily/P25Hostsupdate
+# /etc/cron.daily/TGList-DMR_update
+# /etc/cron.daily/TGList-NXDN_update
+# /etc/cron.daily/TGList-P25_update
+# /etc/cron.daily/XLXHostsupdate
+# /etc/cron.daily/YSFHostsupdate
 
 # Install the dashboard
 #
@@ -163,7 +163,10 @@ chmod -R 775 /var/www/html
 lighty-enable-mod fastcgi
 lighty-enable-mod fastcgi-php
 
-mv /var/www/html/index.lighttpd.html /var/www/html/index.lighttpd.html.old
+FILE=/var/www/html/index.lighttpd.html
+if test -f "$FILE"; then
+    mv /var/www/html/index.lighttpd.html /var/www/html/index.lighttpd.html.old
+fi
 
 systemctl restart lighttpd
 
