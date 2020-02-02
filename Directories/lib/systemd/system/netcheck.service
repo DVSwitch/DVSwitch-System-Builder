@@ -16,7 +16,7 @@ Wants=network-online.target
 [Service]
 Type=notify
 StandardOutput=null
-ExecStartPre = /bin/sh -c 'echo "Starting NetCheck in systemd: [`date +%T.%3N`]" >> /var/log/netcheck'
+ExecStartPre = /bin/sh -c 'echo "Starting NetCheck in systemd: [`date +%%T.%%3N`]" >> /var/log/netcheck'
 ExecStart=/usr/local/sbin/netcheck
 
 [Install]
