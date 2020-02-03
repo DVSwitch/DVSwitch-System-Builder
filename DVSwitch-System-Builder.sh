@@ -146,6 +146,7 @@ systemctl enable p25parrot.service
 systemctl enable ysfgateway.service
 systemctl enable ysfparrot.service
 systemctl enable netcheck.service
+systemctl enable ircddbgatewayd.service
 
 # Populate the datafiles
 #
