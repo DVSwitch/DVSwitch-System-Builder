@@ -42,6 +42,8 @@ cd /srv/DVSwitch-System-Builder
 
 cp -rf ./Directories/* /
 
+# Update the data files for gateways
+/usr/local/sbin/DVSM_Update.sh
 
 # Clone the source code for the programs we want to install
 # The directories were installed from above
