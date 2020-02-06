@@ -137,6 +137,7 @@ make clean
 make
 cp YSFParrot /opt/YSFParrot
 
+/usr/local/sbin/DVSM_Update.sh
 
 # Enable the systemd unit files
 #

@@ -1,0 +1,105 @@
+; APRS_Hosts.txt downloaded from http://www.pistar.uk/downloads/APRS_Hosts.txt
+; File created at Tuesday 10th of Dec 2019 06:08 AM
+rotate.aprs2.net:14580;User Definable Filter Port: Rotate Auto
+amsterdam.aprs2.net:14580;User Definable Filter Port: T2HAM Amsterdam NL
+aprsnz.aprs2.net:14580;User Definable Filter Port: T2APRSNZ Blenheim NZ
+arkansas.aprs2.net:14580;User Definable Filter Port: T2ARK Greenwood, Arkansas US
+asia.aprs2.net:14580;Universal connection for servers in Asia
+aunz.aprs2.net:14580;Universal connection for servers in Australia and New Zealand
+austria.aprs2.net:14580;User Definable Filter Port: T2AUSTRIA Feldkirch AT
+basel.aprs2.net:14580;User Definable Filter Port: T2BASEL Basel CH
+bc.aprs2.net:14580;User Definable Filter Port: T2BC Vancouver CA
+belgium.aprs2.net:14580;User Definable Filter Port: T2BELGIUM Diest BE
+bern.aprs2.net:14580;User Definable Filter Port: T2BERN Bern CH
+brazil.aprs2.net:14580;User Definable Filter Port: T2BRAZIL Rio De Janeiro BR
+aprs.amrase.org.br:14580;User Definable Filter Port: T2BRAZIL REF018-AMRASE BR
+bwi.aprs2.net:14580;User Definable Filter Port: T2BWI Baltimore US
+central.aprs2.net:14580;User Definable Filter Port: T2MCI Kansas City US
+cmh.aprs2.net:14580;User Definable Filter Port: T2CMH Columbus US
+csngrad.aprs2.net:14580;User Definable Filter Port: T2CSNGRAD Csongrad HU
+czech.aprs2.net:14580;User Definable Filter Port: T2CZECH Jesenice CZ
+denmark.aprs2.net:14580;User Definable Filter Port: T2DENMARK Copenhagen DK
+d-prs.d-star.info:14580;User Definable Filter Port: T2JAPAN Kashiwara JP
+edmonton.aprs2.net:14580;User Definable Filter Port: T2EDM Edmonton CA
+ehime.aprs2.net:14580;User Definable Filter Port: T2EHIME Matsuyama, Ehime JP
+eisberg.aprs2.net:14580;User Definable Filter Port: T2EISBERG Eisberg, Ruckersrieth DE
+england.aprs2.net:14580;User Definable Filter Port: T2ENGLAND Hartland GB
+erfurt.aprs2.net:14580;User Definable Filter Port: T2ERFURT Erfurt DE
+euro.aprs2.net:14580;Universal connection for servers in Europe and Africa
+euskadi.aprs2.net:14580;User Definable Filter Port: T2EUSKADI Bilbao - Euskadi ES
+fejer.aprs2.net:14580;User Definable Filter Port: T2FEJER Csakvar HU
+finland.aprs2.net:14580;User Definable Filter Port: T2FINLAND Espoo FI
+firenet-1.aprs2.net:14580;User Definable Filter Port: N5JXS-F1 Norman, OK US
+firenet-2.aprs2.net:14580;User Definable Filter Port: WE7U-F1 Ashburn, VA US
+firenet-3.aprs2.net:14580;User Definable Filter Port: WE7U-F2 Santa Cruz, CA US
+fukuoka.aprs2.net:14580;User Definable Filter Port: T2FUKUOKA Fukuoka JP
+greece.aprs2.net:14580;User Definable Filter Port: T2GREECE Thessaloniki GR
+gyor.aprs2.net:14580;User Definable Filter Port: T2GYOR Gyor HU
+hakata.aprs2.net:14580;User Definable Filter Port: T2HAKATA Fukuoka JP
+hangzhou.aprs2.net:14580;User Definable Filter Port: T2HGH Hangzhou, Zhejiang CN
+hun.aprs2.net:14580;User Definable Filter Port: T2HUN Budapest HU
+iad.aprs2.net:14580;User Definable Filter Port: T2IAD Dulles US
+iad2.aprs2.net:14580;User Definable Filter Port: T2IAD2 Dulles US
+iceland.aprs2.net:14580;User Definable Filter Port: T2ICELAND Akranes IS
+indiana.aprs2.net:14580;User Definable Filter Port: T2INDIANA Mishawaka US
+ireland.aprs2.net:14580;User Definable Filter Port: T2IRELAND Waterford IE
+italy1.aprs2.net:14580;User Definable Filter Port: T2ITALY1 Turin IT
+j-net.aprs2.net:14580;User Definable Filter Port: T2JNET Kirishima JP
+jakarta.aprs2.net:14580;User Definable Filter Port: T2JKTP Jakarta ID
+karlsruhe.aprs2.net:14580;User Definable Filter Port: T2KA Karlsruhe DE
+koblenz.aprs2.net:14580;User Definable Filter Port: T2KOBLENZ Koblenz DE
+krakow.aprs2.net:14580;User Definable Filter Port: T2KRAKOW Krakow PL
+leipzig.aprs2.net:14580;User Definable Filter Port: T2LEIPZIG Leipzig DE
+lga.aprs2.net:14580;User Definable Filter Port: T2LGA New York US
+lodz.aprs2.net:14580;User Definable Filter Port: T2POLC Lodz PL
+london.aprs2.net:14580;User Definable Filter Port: T2LONDON London GB
+lublin.aprs2.net:14580;User Definable Filter Port: T2LUBLIN Lublin PL
+maine.aprs2.net:14580;User Definable Filter Port: T2MAINE Augusta, Maine US
+mazury.aprs2.net:14580;User Definable Filter Port: T2MAZURY EK PL
+mexico.aprs2.net:14580;User Definable Filter Port: T2MEXICO Queretaro MX
+missouri.aprs2.net:14580;User Definable Filter Port: T2MSSOURI Columbia US
+newengland.aprs2.net:14580;User Definable Filter Port: T2NUENGLD Providence US
+noam.aprs2.net:14580;Universal connection for servers in North America
+northwest.aprs2.net:14580;User Definable Filter Port: T2USANW Seattle US
+norway.aprs2.net:14580;User Definable Filter Port: T2NORWAY Mo I Rana NO
+nuremberg.aprs2.net:14580;User Definable Filter Port: T2NUERNBG Nuremberg DE
+ontario.aprs2.net:14580;User Definable Filter Port: T2ONTARIO Acton, Ontario CA
+ordigi.aprs2.net:14580;User Definable Filter Port: T2JKTBRT Jakarta Barat ID
+oregon.aprs2.net:14580;User Definable Filter Port: T2OREGON Corvallis US
+osaka.aprs2.net:14580;User Definable Filter Port: T2OSAKA Osaka JP
+poland.aprs2.net:14580;User Definable Filter Port: T2POLAND Lublin PL
+portugal.aprs2.net:14580;User Definable Filter Port: T2PRT Lisbon PT
+puertorico.aprs2.net:14580;User Definable Filter Port: T2PR San Juan PR
+queensland.aprs2.net:14580;User Definable Filter Port: T2QLD Brisbane AU
+radom.aprs2.net:14580;User Definable Filter Port: T2RADOM Radom PL
+raqi.aprs2.net:14580;User Definable Filter Port: T2QUEBEC Montreal CA
+romania.aprs2.net:14580;User Definable Filter Port: T2ROMANIA Bucuresti RO
+russia.aprs2.net:14580;User Definable Filter Port: T2RUSSIA Moscow RU
+sapporo.aprs2.net:14580;User Definable Filter Port: T2SAPPORO Sapporo JP
+sjc.aprs2.net:14580;User Definable Filter Port: T2SJC San Jose US
+soam.aprs2.net:14580;Universal connection for servers in South America
+socal.aprs2.net:14580;User Definable Filter Port: T2SOCAL Los Angeles US
+solo.aprs2.net:14580;User Definable Filter Port: T2SOLO Solothurn CH
+sp.aprs2.net:14580;User Definable Filter Port: T2SP Krakow PL
+spain.aprs2.net:14580;User Definable Filter Port: T2SPAIN Elda ES
+spain2.aprs2.net:14580;User Definable Filter Port: T2SPAIN2 Valladolid ES
+sweden.aprs2.net:14580;User Definable Filter Port: T2SWEDEN Stockholm SE
+sweden2.aprs2.net:14580;User Definable Filter Port: T2SWEDEN2 Tyreso SE
+sydney.aprs2.net:14580;User Definable Filter Port: T2SYDNEY Sydney AU
+szczecin.aprs2.net:14580;User Definable Filter Port: T2POLNW Szczecin PL
+t2xwt.aprs2.net:14580;User Definable Filter Port: T2XWT Shanghai CN
+t2hag.f5kav.org:14580;User Definable Filter Port: T2HAG France FR
+tasmania.aprs2.net:14580;User Definable Filter Port: T2TAS Kingston AU
+texas.aprs2.net:14580;User Definable Filter Port: T2TEXAS Abilene US
+tokyo.aprs2.net:14580;User Definable Filter Port: T2TOKYO Tokyo JP
+tokyo2.aprs2.net:14580;User Definable Filter Port: T2TOKYO2 Tokyo JP
+tokyo3.aprs2.net:14580;User Definable Filter Port: T2TOKYO3 Tokyo JP
+turkiye.aprs2.net:14580;User Definable Filter Port: T2TURKIYE Golcuk, Kocaeli TR
+tus.aprs2.net:14580;User Definable Filter Port: T2TUS Tucson US
+uk.aprs2.net:14580;User Definable Filter Port: T2UK Milton Keynes GB
+ukraine.aprs2.net:14580;User Definable Filter Port: T2UKRAINE Mariupol UA
+vancouver.aprs2.net:14580;User Definable Filter Port: T2VAN Vancouver CA
+ycw.aprs2.net:14580;User Definable Filter Port: T2CAWEST Chilliwack CA
+yyz.aprs2.net:14580;User Definable Filter Port: T2CAEAST Toronto CA
+zug.aprs2.net:14580;User Definable Filter Port: T2ZUG Zug CH
+zurich.aprs2.net:14580;User Definable Filter Port: T2ZURICH Zurich CH
