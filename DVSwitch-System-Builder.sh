@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -o errexit
 
-# N4IRS 06/19/2018
+# N4IRS 02/10/2020
 
 #################################################
 #                                               #
-#    Build a MMDVM Node on a clean disk         #
+#    Build a DVSwitch Server on a clean disk    #
 #                                               #
 #################################################
 
