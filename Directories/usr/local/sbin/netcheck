@@ -6,7 +6,7 @@
 # /etc/default/netcheck
 
 # Initialize number of attempts
-reachable=4
+reachable=9
 echo "NetCheck starting: [`date +%T.%3N`]" >> /var/log/netcheck
 while [ $reachable -ne 0 ]; do
   # Check host
