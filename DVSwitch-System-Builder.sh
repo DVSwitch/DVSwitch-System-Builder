@@ -168,6 +168,10 @@ systemctl enable ircddbgatewayd.service
 
 # Install the dashboard
 #
+
+# Clean out unneeded database update scripts
+/usr/local/sbin/cleanup.sh
+
 apt-get install lighttpd -y
 
 # Need to add test for Stretch vs Jessie
