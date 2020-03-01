@@ -29,7 +29,7 @@ apt-get install build-essential -y
 apt-get install libwxgtk3.0-dev -y
 apt-get install portaudio19-dev -y
 apt-get install libusb-1.0-0-dev -y
-apt-get install chkconfig -y
+# apt-get install chkconfig -y
 apt-get install python-serial -y
 apt-get install dvswitch -y
 apt-get install quantar -y
