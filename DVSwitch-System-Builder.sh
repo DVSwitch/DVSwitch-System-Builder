@@ -24,7 +24,7 @@ apt-get update
 
 # print the installed repositories NEEDS work!
 echo "Installed repositories:"
-apt-cache policy | grep http | awk '{print $2 $3}' | sort -u
+apt-cache policy | grep http | awk '{print  $2 " " $3 " " $4}' | sort -u
 
 # Install needed programs
 apt-get update -y
