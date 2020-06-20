@@ -35,6 +35,7 @@ apt-get update -y
 # apt-get install libusb-1.0-0-dev -y
 # apt-get install python-serial -y
 
+# Note: add /etc/profile.d/dvs-path.sh to dvswitch-base apt package
 apt-get install -y dvswitch-base
 
 apt-get install -y analog-bridge
