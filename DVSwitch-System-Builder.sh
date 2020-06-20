@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errexit
 
-# N4IRS 05/18/2020
+# N4IRS 02/10/2020
 
 #################################################
 #                                               #
@@ -12,169 +12,58 @@ set -o errexit
 # Install DVSwitch Repository
 cd /tmp
 
-wget http://dvswitch.org/install-dvswitch-repo
-chmod +x install-dvswitch-repo
-./install-dvswitch-repo
+# Add DVSwitch Repository and gpg key
+
+if [ ! -f /etc/apt/sources.list.d/dvswitch.list ]
+	then
+	echo "deb http://dvswitch.org/ASL_Repository buster hamradio" >/etc/apt/sources.list.d/dvswitch.list
+	wget -O - http://dvswitch.org/ASL_Repository/dvswitch.gpg.key | apt-key add -
+fi
+
+apt-get update
+
+# print the installed repositories NEEDS work!
+echo "Installed repositories:"
+apt-cache policy | grep http | awk '{print $2 $3}' | sort -u
 
 # Install needed programs
-# This could be pruned
-#
 apt-get update -y
-apt-get install git -y
-apt-get install curl -y
-apt-get install g++ -y
-apt-get install make -y
-apt-get install jq -y
-apt-get install build-essential -y
-apt-get install libwxgtk3.0-dev -y
-apt-get install portaudio19-dev -y
-apt-get install libusb-1.0-0-dev -y
-# apt-get install chkconfig -y
-apt-get install python-serial -y
-apt-get install dvswitch -y
-apt-get install quantar -y
+# apt-get install git -y
+# apt-get install curl -y
+# apt-get install libwxgtk3.0-dev -y
+# apt-get install portaudio19-dev -y
+# apt-get install libusb-1.0-0-dev -y
+# apt-get install python-serial -y
 
-# For Armbian Need to check this !
-# apt-get install libstdc++-arm-none-eabi-newlib -y
+apt-get install -y dvswitch-base
 
-# Need to save the working directory. This will work for now
+apt-get install -y analog-bridge
+apt-get install -y md380-emu
 
-cd /srv/DVSwitch-System-Builder
+apt-get install -y mmdvm-bridge
+############### apt-get install -y dmrgateway
 
-cp -rf ./Directories/* /
+apt-get install -y nxdngateway
+apt-get install -y nxdnparrot
 
-# Update the data files for gateways
-# /usr/local/sbin/DVSM_Update.sh
+apt-get install -y p25gateway
+apt-get install -y p25parrot
 
-# Clone the source code for the programs we want to install
-# The directories were installed from above
+apt-get install -y ysfgateway
+apt-get install -y ysfparrot
 
-cd /srv/Repositories/DVSwitch
-git clone https://github.com/DVSwitch/MMDVMHost-Dashboard.git
+apt-get install -y ircddbgateway
 
-## cd /srv/Repositories/DVSwitch
+apt-get install -y quantar-bridge
 
-cd /srv/Repositories/G4KLX
-git clone https://github.com/g4klx/DMRGateway.git
-git clone https://github.com/g4klx/P25Clients.git
-git clone https://github.com/g4klx/YSFClients.git
-git clone https://github.com/g4klx/NXDNClients.git
-git clone https://github.com/g4klx/ircDDBGateway.git
+# Don't run QB at boot for now.
+systemctl disable quantar_bridge
 
-cd /srv/Repositories/N0MJS
-git clone https://github.com/n0mjs710/dmr_utils.git
-git clone https://github.com/n0mjs710/HBlink.git
-git clone https://github.com/n0mjs710/DMRlink.git
-git clone -b HB_Bridge https://github.com/n0mjs710/HBlink.git HB_Bridge
-git clone -b IPSC_Bridge https://github.com/n0mjs710/DMRlink.git IPSC_Bridge
-
-# Copy the source directories to /usr/src
-# This allows me to keep a pristine copy in /srv/Repositories
-
-cd /srv/Repositories/DVSwitch
-cp -R MMDVMHost-Dashboard/* /var/www/html/
-
-cd /srv/Repositories/G4KLX
-cp -rf DMRGateway /usr/src
-
-cp -rf ircDDBGateway /usr/src/
-
-cd /srv/Repositories/G4KLX/NXDNClients
-cp -rf NXDNGateway NXDNParrot /usr/src
-
-cd /srv/Repositories/G4KLX/P25Clients
-cp -rf P25Gateway P25Parrot /usr/src
-
-cd /srv/Repositories/G4KLX/YSFClients
-cp -rf YSFGateway YSFParrot /usr/src
-
-
-
-# cd /srv/Repositories/N0MJS
-# Flesh this out
-
-## Build the programs from source
-## Yes, this is brute force
-
-cd /usr/src/DMRGateway
-make clean
-make
-cp DMRGateway /opt/DMRGateway
-cp -rf Audio /opt/DMRGateway
-
-cd /usr/src/ircDDBGateway
-make clean
-make
-make install
-
-cd /usr/src/NXDNGateway
-make clean
-make
-cp NXDNGateway /opt/NXDNGateway
-cp -rf Audio /opt/NXDNGateway
-
-cd /usr/src/NXDNParrot
-make clean
-make
-cp NXDNParrot /opt/NXDNParrot
-
-cd /usr/src/P25Gateway
-make clean
-make
-cp P25Gateway /opt/P25Gateway
-
-cd /usr/src/P25Parrot
-make clean
-make
-cp P25Parrot /opt/P25Parrot
-
-cd /usr/src/YSFGateway
-make clean
-make
-cp YSFGateway /opt/YSFGateway
-
-cd /usr/src/YSFParrot
-make clean
-make
-cp YSFParrot /opt/YSFParrot
-
-/usr/local/sbin/DVSM_Update.sh
-
-# Enable the systemd unit files
-#
-systemctl enable systemd-networkd-wait-online.service
-systemctl enable nxdngateway.service
-systemctl enable nxdnparrot.service
-systemctl enable p25gateway.service
-systemctl enable p25parrot.service
-systemctl enable ysfgateway.service
-systemctl enable ysfparrot.service
-systemctl enable netcheck.service
-systemctl enable ircddbgatewayd.service
-
-# Populate the datafiles
-#
-# /etc/cron.daily/DMRIDUpdateBM
-# /etc/cron.daily/FCSRoomsupdate
-# /etc/cron.daily/HBIDUpdate
-# /etc/cron.daily/NXDNHostsupdate
-# /etc/cron.daily/NXDNIDUpdate
-# /etc/cron.daily/P25Hostsupdate
-# /etc/cron.daily/TGList-DMR_update
-# /etc/cron.daily/TGList-NXDN_update
-# /etc/cron.daily/TGList-P25_update
-# /etc/cron.daily/XLXHostsupdate
-# /etc/cron.daily/YSFHostsupdate
-
-# Install the dashboard
-#
-
-# Clean out unneeded database update scripts
-/usr/local/sbin/cleanup.sh
+exit 0
 
 apt-get install lighttpd -y
 
-# Need to add test for Stretch vs Jessie
+# Need to add test for Buster vs Stretch vs Jessie
 # apt-get install php7.0-common -y
 # apt-get install php -y
 apt-get install php7.3-cgi -y
@@ -192,4 +81,3 @@ fi
 
 systemctl restart lighttpd
 
-# Add DVSwitch programs via apt-get install
