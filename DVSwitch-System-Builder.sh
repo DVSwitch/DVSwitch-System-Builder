@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -o errexit
 
-# N4IRS 02/10/2020
+# N4IRS 10/30/2020
 
 #################################################
 #                                               #
@@ -62,11 +62,11 @@ git clone https://github.com/g4klx/NXDNClients.git
 git clone https://github.com/g4klx/ircDDBGateway.git
 
 cd /srv/Repositories/N0MJS
-git clone https://github.com/n0mjs710/dmr_utils.git
-git clone https://github.com/n0mjs710/HBlink.git
-git clone https://github.com/n0mjs710/DMRlink.git
-git clone -b HB_Bridge https://github.com/n0mjs710/HBlink.git HB_Bridge
-git clone -b IPSC_Bridge https://github.com/n0mjs710/DMRlink.git IPSC_Bridge
+git clone https://github.com/HBLink-org/dmr_utils.git
+git clone https://github.com/HBLink-org/HBLink.git
+git clone https://github.com/HBLink-org/DMRlink.git
+git clone -b HB_Bridge https://github.com/HBLink-org/HBLink.git HB_Bridge
+git clone -b IPSC_Bridge https://github.com/HBLink-org/DMRlink.git IPSC_Bridge
 
 # Copy the source directories to /usr/src
 # This allows me to keep a pristine copy in /srv/Repositories
@@ -122,6 +122,7 @@ cd /usr/src/P25Gateway
 make clean
 make
 cp P25Gateway /opt/P25Gateway
+cp -rf Audio /opt/P25Gateway
 
 cd /usr/src/P25Parrot
 make clean
@@ -177,7 +178,7 @@ apt-get install lighttpd -y
 # Need to add test for Stretch vs Jessie
 # apt-get install php7.0-common -y
 # apt-get install php -y
-apt-get install php7.3-cgi -y
+apt-get install php-cgi -y
 
 chown -R www-data:www-data /var/www/html
 chmod -R 775 /var/www/html
