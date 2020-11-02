@@ -1,5 +1,0 @@
- 308  apt --installed list
-  309  apt --installed list >/tmp/installed.txt
-  310  more /tmp/installed.txt 
-  311  nano /tmp/installed.txt 
-

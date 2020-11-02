@@ -1,16 +1,17 @@
 # DVSwitch-System-Builder
 
 
+# Install DVSwitch Repository
+
 cd /tmp
 
-wget https://github.com/DVSwitch/DVSwitch-System-Builder/archive/master.zip
+wget http://dvswitch.org/buster
 
-cd /srv
+chmod +x buster
 
-unzip /tmp/master.zip 
+./buster
 
-mv DVSwitch-System-Builder-master DVSwitch-System-Builder
+apt-get update -y
 
-cd DVSwitch-System-Builder
+apt-get install dvswitch-server -y
 
-./DVSwitch-System-Builder.sh 
