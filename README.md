@@ -22,6 +22,9 @@ The System Monitor
 The configuration menu (dvs)
 
 The dvs menu is not in the path of the Super User. It is in the path of a non-privileged user.
+
 To run dvs as Super User:
+
 cd /usr/local/dvs
+
 ./dvs
