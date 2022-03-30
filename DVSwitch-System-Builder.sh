@@ -18,11 +18,3 @@ chmod +x buster
 
 apt-get update --allow-releaseinfo-change
 apt-get install dvswitch-server -y
-
-# cd /srv/Repositories/N0MJS
-# git clone https://github.com/HBLink-org/dmr_utils.git
-# git clone https://github.com/HBLink-org/HBLink.git
-# git clone https://github.com/HBLink-org/DMRlink.git
-# git clone -b HB_Bridge https://github.com/HBLink-org/HBLink.git HB_Bridge
-# git clone -b IPSC_Bridge https://github.com/HBLink-org/DMRlink.git IPSC_Bridge
-
