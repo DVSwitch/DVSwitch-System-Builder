@@ -4,15 +4,9 @@
 # Install DVSwitch Repository
 
 cd /tmp
-
 wget http://dvswitch.org/buster
-
 chmod +x buster
-
-./buster
-
 apt-get update --allow-releaseinfo-change
-
 apt-get install dvswitch-server -y
 
 You now have the COMPLETE DVSwitch Server installed. This includes:
