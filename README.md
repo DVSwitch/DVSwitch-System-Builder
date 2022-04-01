@@ -11,6 +11,8 @@ chmod +x buster
 
 apt-get update --allow-releaseinfo-change
 
+apt-get update
+
 apt-get install dvswitch-server -y
 
 You now have the COMPLETE DVSwitch Server installed. This includes:
