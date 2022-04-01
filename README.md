@@ -11,6 +11,8 @@ chmod +x buster
 
 apt-get update --allow-releaseinfo-change
 
+./buster
+
 apt-get update
 
 apt-get install dvswitch-server -y
